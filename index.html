@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealEstate Token</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(90deg, #13162D, #1E2147);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background: #f4f4f4;
+            color: #222;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        .nav .nav-item {
+            margin: 0 10px;
+        }
+        .btn-primary {
+            background: #8C52FF;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #6A38D1;
+        }
+        #hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            animation: cityGrowth 10s infinite alternate ease-in-out;
+        }
+        @keyframes cityGrowth {
+            0% { background-image: url('images/stage1-house.jpg'); }
+            25% { background-image: url('images/stage2-buildings.jpg'); }
+            50% { background-image: url('images/stage3-mid-city.jpg'); }
+            75% { background-image: url('images/stage4-full-city.jpg'); }
+            100% { background-image: url('images/stage5-megacity.jpg'); }
+        }
+        footer {
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="images/logo.png" alt="RealEstate Token Logo" class="logo" width="150">
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#roadmap" class="nav-link text-white">Roadmap</a></li>
+                    <li class="nav-item"><a href="#team" class="nav-link text-white">Echipa</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="btn btn-light">🌙</button>
+        </div>
+    </header>
+    
+    <section id="hero" class="text-white">
+        <div>
+            <h1 class="fw-bold">Investiții imobiliare prin tehnologia blockchain</h1>
+            <p class="lead">RealEstate Token transformă modul în care investim în proprietăți.</p>
+            <a href="#tokenomics" class="btn btn-primary btn-lg">Află mai multe</a>
+        </div>
+    </section>
+    
+    <section id="roadmap" class="container py-5">
+        <h2 class="text-center">Roadmap</h2>
+        <ul>
+            <li><strong>Faza 1:</strong> Lansarea tokenului pe Binance Smart Chain.</li>
+            <li><strong>Faza 2:</strong> Integrarea cu PancakeSwap și listarea pe platforme de trading.</li>
+            <li><strong>Faza 3:</strong> Achiziția de proprietăți imobiliare cu fondurile obținute din vânzarea tokenurilor.</li>
+            <li><strong>Faza 4:</strong> Închirierea imobilelor și folosirea profiturilor pentru a răscumpăra și arde tokenuri.</li>
+            <li><strong>Faza 5:</strong> Extinderea și dezvoltarea unui ecosistem bazat pe blockchain pentru investiții imobiliare.</li>
+        </ul>
+    </section>
+    
+    <section id="team" class="container py-5 text-center">
+        <h2>Echipa Noastră</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Pop Petre Florin</h3>
+                <p>CEO & Fondator</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Sorin Katler</h3>
+                <p>Co-Fondator</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="container py-5 text-center">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:realestate.token@yahoo.com">realestate.token@yahoo.com</a></p>
+    </section>
+    
+    <footer class="bg-dark text-white text-center">
+        <p>&copy; 2025 RealEstate Token. Toate drepturile rezervate.</p>
+    </footer>
+    
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            this.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
